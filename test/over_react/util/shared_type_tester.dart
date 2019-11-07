@@ -1,4 +1,3 @@
-@TestOn('browser')
 @JS()
 library shared_type_tester;
 

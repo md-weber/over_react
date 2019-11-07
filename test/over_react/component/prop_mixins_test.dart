@@ -23,6 +23,9 @@ import 'package:test/test.dart';
 import '../../test_util/prop_utils.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('ReactProps', () {
     testInvalidKey((() => ReactPropMixinsTest({})));
     test('uses unnamespaced keys', () {

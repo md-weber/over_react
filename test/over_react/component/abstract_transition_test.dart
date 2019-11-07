@@ -31,6 +31,9 @@ part 'abstract_transition_test.over_react.g.dart';
 
 /// Main entry point for AbstractTransition testing
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('AbstractTransition', () {
     group('renders with correct initial state when the `initiallyShown` getter returns', () {
       test('true', () {

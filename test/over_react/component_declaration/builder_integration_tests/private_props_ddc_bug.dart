@@ -23,6 +23,9 @@ import '../../../test_util/test_util.dart';
 part 'private_props_ddc_bug.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   test('sets private props correctly in `getDefaultProps`', () {
     var instance = render((Foo())());
 

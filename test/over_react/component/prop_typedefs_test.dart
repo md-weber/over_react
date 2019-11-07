@@ -15,11 +15,15 @@
 @TestOn('browser')
 library prop_typedefs_test.dart;
 
+import 'package:over_react/over_react.dart';
 import 'package:test/test.dart';
 import 'package:over_react_test/over_react_test.dart';
 import './fixtures/prop_typedef_fixtures.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   // Regression tests for https://github.com/dart-lang/sdk/issues/38880
   group('CustomRenderFunction typedef', () {
     TestJacket jacket;

@@ -21,6 +21,9 @@ import 'package:test/test.dart';
 part 'abstract_accessor_integration_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('abstract accessor integration:', () {
     group('@AbstractProps()', () {
       group('generates prop getters/setters with', () {

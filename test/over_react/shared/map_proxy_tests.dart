@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@TestOn('browser')
 library over_react_tests.shared.map_proxy_tests;
 
 import 'package:mockito/mockito.dart';

@@ -46,6 +46,9 @@ targets:
 
       build_web_compilers|entrypoint:
         generate_for:
-          - "example/**.dart"
-          - "test/*.browser_test.dart"
-          - "web/**/index.dart"
+          include:
+            - "example/**.dart"
+            - "test/**_test.dart"
+            - "web/**/index.dart"
+          exclude:
+            - "test/vm_tests/**"

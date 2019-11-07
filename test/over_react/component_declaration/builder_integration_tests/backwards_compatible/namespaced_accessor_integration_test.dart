@@ -24,6 +24,9 @@ import '../../../../test_util/test_util.dart';
 part 'namespaced_accessor_integration_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('(backwards compatible with Dart 1) custom namespaced props/state integration:', () {
     group('generates prop getters/setters, when there is a custom key namespace, with', () {
       test('the custom namespace and the prop name as the key by default', () {

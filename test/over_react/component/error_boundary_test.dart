@@ -22,6 +22,9 @@ import 'package:test/test.dart';
 import 'shared_error_boundary_tests.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('ErrorBoundary', () {
     sharedErrorBoundaryTests(() => ErrorBoundary());
   });

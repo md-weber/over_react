@@ -27,6 +27,9 @@ part 'dom_util_test.over_react.g.dart';
 
 /// Main entry point for DomUtil testing
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('isOrContains returns', () {
     group('true when', () {
       test('root is the other element', () {

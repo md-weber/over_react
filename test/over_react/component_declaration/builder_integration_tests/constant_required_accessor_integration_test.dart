@@ -26,6 +26,9 @@ import '../../../test_util/test_util.dart';
 part 'constant_required_accessor_integration_test.over_react.g.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('properly identifies required props by', () {
     group('throwing when a prop is required and not set', () {
       test('on mount', () {

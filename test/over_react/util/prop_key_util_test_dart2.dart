@@ -7,6 +7,9 @@ import 'package:over_react/src/util/prop_key_util.dart';
 part 'prop_key_util_test_dart2.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('getPropKey', () {
     test('returns the expected key', () {
       var testProps = Test()..foo = 'baz';

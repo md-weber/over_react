@@ -24,6 +24,9 @@ import '../../../test_util/test_util.dart';
 part 'component_integration_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+  
   group('component integration:', () {
     test('renders a component from end to end, successfully reading props via typed getters', () {
       var instance = render((ComponentTest()

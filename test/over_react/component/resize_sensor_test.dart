@@ -26,6 +26,9 @@ import 'package:over_react/react_dom.dart' as react_dom;
 import 'package:test/test.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('ResizeSensor', () {
     const int defaultContainerWidth = 100;
     const int defaultContainerHeight = 100;

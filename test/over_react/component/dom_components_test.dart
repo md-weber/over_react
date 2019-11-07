@@ -20,6 +20,9 @@ import 'package:react/react_client.dart';
 import 'package:test/test.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('Dom component:', () {
     var expectedMethodsOnDom = <Function /* dom method */, String /* method name */>{
       Dom.a: 'a', Dom.abbr: 'abbr', Dom.address: 'address', Dom.area: 'area', Dom.article: 'article',

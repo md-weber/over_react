@@ -45,6 +45,7 @@ dev_dependencies:
   redux_remote_devtools: ^0.0.7
   pedantic: ^1.8.0
   test: ^1.9.1
+  test_html_builder: ^1.0.2
 
 dependency_overrides:
   react:

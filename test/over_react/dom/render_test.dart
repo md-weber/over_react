@@ -24,6 +24,9 @@ import 'package:test/test.dart';
 import 'fixtures/dummy_composite_component.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('`react_dom.render`', () {
     dynamic renderedInstance;
     Element mountNode;
