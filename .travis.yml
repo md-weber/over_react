@@ -6,7 +6,7 @@ dart:
   - dev
 
 before_script:
-  - pub run build_runner build
+  - pub run build_runner build --delete-conflicting-outputs
   - git diff --exit-code
   - pub run dart_dev analyze
   - pub run dependency_validator -i test_html_builder
