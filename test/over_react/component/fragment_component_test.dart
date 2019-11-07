@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+@TestOn('browser')
 library fragment_component_test;
 
 import 'dart:html';
@@ -23,6 +24,9 @@ import 'package:test/test.dart';
 import 'fixtures/dummy_component.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('Fragment', () {
     test('renders only its children', () {
       DivElement wrappingDivRef;

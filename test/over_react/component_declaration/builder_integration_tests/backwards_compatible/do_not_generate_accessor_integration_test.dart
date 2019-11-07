@@ -13,6 +13,8 @@
 // limitations under the License.
 
 // ignore_for_file: deprecated_member_use_from_same_package
+@TestOn('browser')
+
 import 'package:over_react/over_react.dart';
 import 'package:test/test.dart';
 
@@ -22,6 +24,9 @@ import '../../../../test_util/test_util.dart';
 part 'do_not_generate_accessor_integration_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('(backwards compatible with Dart 1) acessors with doNotGenerate integration', () {
     group('generates prop getters/setters properly', () {
       test('for prop fields listed before the field annotated with doNotGenerate', () {

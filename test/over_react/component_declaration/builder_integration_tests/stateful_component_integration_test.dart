@@ -13,6 +13,8 @@
 // limitations under the License.
 
 // ignore_for_file: deprecated_member_use_from_same_package
+@TestOn('browser')
+
 import 'package:over_react/over_react.dart';
 import 'package:test/test.dart';
 
@@ -21,6 +23,9 @@ import '../../../test_util/test_util.dart';
 part 'stateful_component_integration_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('stateful component integration:', () {
     test('state class cannot be instantiated directly', () {
       expect(() {

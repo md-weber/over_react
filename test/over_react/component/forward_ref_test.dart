@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+@TestOn('browser')
 library forward_ref_test;
 
 import 'dart:html';
@@ -26,6 +27,9 @@ import '../component/fixtures/basic_child_component.dart';
 part 'forward_ref_test.over_react.g.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('forward ref -', () {
     group('on a component with a dom component child', () {
       forwardRefTest(Dom.span, verifyRefValue: (ref) {

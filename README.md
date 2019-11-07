@@ -117,15 +117,15 @@ __you must run your tests using build_runner__.
     $ pub run build_runner test -- -p chrome test/your_test_file.dart
     ```
 
-1. When running tests in `over_react`, our `dart_test.yaml` specifies some handy presets for running tests in DDC and dart2js:
+1. When running tests in `over_react`, our `dart_test.yaml` setup makes it easy to run tests in DDC and dart2js:
     > **Note:** These presets exist only in `over_react`.
     * To run tests in `over_react` compiled via DDC, run:
     ```bash
-    $ pub run build_runner test -- -P dartdevc
+    $ pub run dart_dev test
     ```
     * To run tests in `over_react` compiled via dart2js, run:
     ```bash
-    $ pub run build_runner test -r -- -P dart2js
+    $ pub run dart_dev test --release -P dart2js
     ```
 
 &nbsp;

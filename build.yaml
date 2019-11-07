@@ -30,25 +30,11 @@ targets:
       build_vm_compilers|entrypoint:
         generate_for:
           include:
-            - "test/vm_tests/**"
+            - "test/vm_tests/**.vm_test.dart"
 
-      # builder uses mirrors and will cause a build to fail when using build web compilers
-      # vm tests require the use of mirrors
-      build_web_compilers|ddc:
-        generate_for:
-          include:
-            - "example/**"
-            - "lib/**"
-            - "test/**"
-            - "web/**"
-          exclude:
-            - "lib/src/builder/**"
-
-      build_web_compilers|entrypoint:
-        generate_for:
-          include:
-            - "example/**.dart"
-            - "test/**_test.dart"
-            - "web/**/index.dart"
-          exclude:
-            - "test/vm_tests/**"
+      test_html_builder:
+        options:
+          templates:
+            "test/html_test_template.html":
+              - "test/over_react/**_test.dart"
+              - "test/over_react_redux/**_test.dart"

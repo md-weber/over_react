@@ -13,6 +13,7 @@
 // limitations under the License.
 
 // ignore_for_file: deprecated_member_use_from_same_package
+@TestOn('browser')
 library over_react.builder_generation.helpers_test;
 
 import 'package:over_react/src/component_declaration/builder_helpers.dart';

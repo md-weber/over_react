@@ -1,3 +1,5 @@
+@TestOn('browser')
+
 import 'package:over_react/over_react.dart';
 import 'package:over_react/src/component_declaration/builder_helpers.dart';
 import 'package:test/test.dart';
@@ -10,6 +12,9 @@ part 'component_integration_test/annotation_error_stateful_component.dart';
 part 'component_integration_test/annotation_error_stateful_default_props_component.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('(Component2) throws a helpful error message if the @Component annotation is used:',
       () {
     final throwsExpectedError = throwsA(hasToStringValue(contains(

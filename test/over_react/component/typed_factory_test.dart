@@ -1,3 +1,4 @@
+@TestOn('browser')
 library typed_factory_test;
 
 import 'package:over_react/over_react.dart';
@@ -5,7 +6,7 @@ import 'package:test/test.dart';
 
 part 'typed_factory_test.over_react.g.dart';
 
-void main(){
+void main() {
   test('typedPropsFactory falls back to empty backingMap when called with null', () {
     var toCheck = _$TypedFactoryTesterComponent().typedPropsFactory(null);
     toCheck.testProp = true;

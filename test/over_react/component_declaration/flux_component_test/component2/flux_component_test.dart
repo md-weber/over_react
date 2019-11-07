@@ -1,5 +1,6 @@
 // Tests adapted from <https://github.com/Workiva/w_flux/blob/1.0.1/test/component_test.dart>.
 
+@TestOn('browser')
 library over_react.component_declaration.component2.flux_component_test;
 
 import 'dart:async';
@@ -28,6 +29,9 @@ part 'stateful/store_handlers.dart';
 part 'flux_component_test.over_react.g.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('(Component2)', () {
     Future nextTick() async {
       await window.animationFrame;

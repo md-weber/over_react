@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+@TestOn('browser')
 library context_test;
 
 import 'package:over_react/over_react.dart';
@@ -26,6 +27,9 @@ import 'fixtures/context_type_component.dart';
 import 'fixtures/test_context.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('Context', () {
     test('createContext() returns a correctly typed object', () {
       expect(someContext, isA<Context>());

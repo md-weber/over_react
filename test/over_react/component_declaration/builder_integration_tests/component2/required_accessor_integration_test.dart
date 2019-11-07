@@ -11,6 +11,9 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+@TestOn('browser')
+
 import 'dart:js';
 
 import 'package:over_react/over_react.dart';
@@ -22,6 +25,9 @@ import '../../../../test_util/test_util.dart';
 part 'required_accessor_integration_test.over_react.g.dart';
 
 void main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('(Component2) propTypes required props', () {
     List<String> consoleErrors;
     JsFunction originalConsoleError;

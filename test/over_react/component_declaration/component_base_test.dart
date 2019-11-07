@@ -13,13 +13,14 @@
 // limitations under the License.
 
 // ignore_for_file: deprecated_member_use_from_same_package, prefer_function_declarations_over_variables
+@TestOn('browser')
 library over_react.component_declaration.component_base_test;
 
 import 'dart:async';
 import 'dart:collection';
 import 'dart:html';
 
-import 'package:over_react/over_react.dart' show Dom, DummyComponent, DummyComponent2, JsBackedMap, UiComponent2, UiStatefulComponent2, ValidationUtil, registerComponent2;
+import 'package:over_react/over_react.dart' show Dom, DummyComponent, DummyComponent2, JsBackedMap, UiComponent2, UiStatefulComponent2, ValidationUtil, enableTestMode, registerComponent2;
 import 'package:over_react/over_react.dart' as over_react;
 import 'package:over_react_test/over_react_test.dart';
 import 'package:over_react/src/component_declaration/component_base.dart';
@@ -33,6 +34,9 @@ import '../../test_util/test_util.dart';
 import '../shared/map_proxy_tests.dart';
 
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   void _commonNonInvokedBuilderTests(UiProps builder) {
     bool warningsWereEnabled;
     setUp(() {

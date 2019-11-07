@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+@TestOn('browser')
 library abstract_transition_test;
 
 import 'package:over_react/over_react.dart';
@@ -26,6 +27,9 @@ import './fixtures/store.dart';
 
 /// Main entry point for AbstractTransition testing
 main() {
+  setClientConfiguration();
+  enableTestMode();
+
   group('connect', () {
     UiFactory<CounterProps> ConnectedCounter;
     TestJacket<CounterComponent> jacket;
