@@ -93,10 +93,8 @@ class ComponentTypeMeta {
   ///     // foo.dart
   ///     //
   ///
-  ///     @Factory()
-  ///     UiFactory<FooProps> Foo;
+  ///     UiFactory<FooProps> Foo = $Foo;
   ///
-  ///     @Component2()
   ///     class FooComponent extends UiComponent2<FooProps> {
   ///       // ...
   ///     }
@@ -105,8 +103,7 @@ class ComponentTypeMeta {
   ///     // bar.dart
   ///     //
   ///
-  ///     @Factory()
-  ///     UiFactory<FooProps> Foo;
+  ///     UiFactory<FooProps> Foo = $Foo;
   ///
   ///     @Component2(subtypeOf: FooComponent)
   ///     class BarComponent extends UiComponent2<BarProps> {
